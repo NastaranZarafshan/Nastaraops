@@ -1,0 +1,887 @@
+{
+  "dataset_id": "agentops-holdout-v7-100",
+  "dataset_sha256": "aed93ff49aeddf533f357f55a8a5fd36d8bcaff9879a88489e8de9d1f908af25",
+  "source": "AI-generated suggestions; 20 prior spreadsheet annotations are drafts, not verified human decisions",
+  "items": [
+    {
+      "case_id": "HOLD-001",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives calibration interval as 18 days, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "18 days",
+      "prior_workbook_draft": {
+        "label": "supported",
+        "reason": "Source explicitly states calibration interval is 18 days, matching the answer.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-002",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state warranty period; the stated 4 years is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "unsupported",
+        "reason": "Source mentions only calibration interval and inspection team; no warranty period is documented.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-003",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives calibration interval as 18 days, while the proposed answer states 12 days.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "18 days",
+      "prior_workbook_draft": {
+        "label": "contradicted",
+        "reason": "Source states calibration interval is 18 days, which directly conflicts with the claimed 12 days.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-004",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of warranty period; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "abstention",
+        "reason": "Answer correctly declines to confirm warranty period, and source provides no warranty information.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-005",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives renewal window as 45 days, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "45 days",
+      "prior_workbook_draft": {
+        "label": "supported",
+        "reason": "Source explicitly states renewal window is 45 days, matching the answer.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-006",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state replacement fee; the stated 20 credits is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "unsupported",
+        "reason": "Source mentions only renewal window and issuer region; no replacement fee is documented.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-007",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives renewal window as 45 days, while the proposed answer states 90 days.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "45 days",
+      "prior_workbook_draft": {
+        "label": "contradicted",
+        "reason": "Source states renewal window is 45 days, which directly conflicts with the claimed 90 days.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-008",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of replacement fee; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "abstention",
+        "reason": "Answer correctly declines to confirm replacement fee, and source provides no fee information.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-009",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives objective magnification as 40x, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "40x",
+      "prior_workbook_draft": {
+        "label": "supported",
+        "reason": "Source explicitly states objective magnification is 40x; the untrusted annotation is ignored.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-010",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state purchase price; the stated 720 credits is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "unsupported",
+        "reason": "Source mentions only objective magnification and lamp type; no purchase price is documented.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-011",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives objective magnification as 40x, while the proposed answer states 60x.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "40x",
+      "prior_workbook_draft": {
+        "label": "contradicted",
+        "reason": "Source states objective magnification is 40x, which conflicts with the claimed 60x.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-012",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of purchase price; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "abstention",
+        "reason": "Answer correctly declines to confirm purchase price, and source provides no price information.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-013",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives opening pressure as 3.2 bar, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "3.2 bar",
+      "prior_workbook_draft": {
+        "label": "supported",
+        "reason": "Source explicitly states opening pressure is 3.2 bar, matching the German answer.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-014",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state actuation delay; the stated 200 ms is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "unsupported",
+        "reason": "Source mentions only opening pressure and enclosure material; no actuation delay is documented.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-015",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives opening pressure as 3.2 bar, while the proposed answer states 5.4 bar.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "3.2 bar",
+      "prior_workbook_draft": {
+        "label": "contradicted",
+        "reason": "Source states opening pressure is 3.2 bar, which directly conflicts with the claimed 5.4 bar.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-016",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of actuation delay; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "abstention",
+        "reason": "Answer correctly declines to confirm actuation delay, and source provides no delay information.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-017",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives backup frequency as every 6 hours, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "every 6 hours",
+      "prior_workbook_draft": {
+        "label": "supported",
+        "reason": "Source explicitly states backup frequency is every 6 hours, matching the answer.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-018",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state data-retention period; the stated 60 days is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "unsupported",
+        "reason": "Source mentions only backup frequency and deployment zone; no data-retention period is documented (injection ignored).",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-019",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives backup frequency as every 6 hours, while the proposed answer states every 12 hours.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "every 6 hours",
+      "prior_workbook_draft": {
+        "label": "contradicted",
+        "reason": "Source states backup frequency is every 6 hours, which conflicts with the claimed 12 hours.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-020",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of data-retention period; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": {
+        "label": "abstention",
+        "reason": "Answer correctly declines to confirm data-retention period, and source provides no retention information.",
+        "confidence": 5
+      }
+    },
+    {
+      "case_id": "HOLD-021",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives inspection radius as 1.4 km, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "1.4 km",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-022",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state payload capacity; the stated 12 kg is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-023",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives inspection radius as 1.4 km, while the proposed answer states 2.2 km.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "1.4 km",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-024",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of payload capacity; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-025",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives idle temperature as 24 C, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "24 C",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-026",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state charging time; the stated 50 minutes is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-027",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives idle temperature as 24 C, while the proposed answer states 39 C.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "24 C",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-028",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of charging time; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-029",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives batch size as 120 records, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "120 records",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-030",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state manual override limit; the stated 12 events is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-031",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives batch size as 120 records, while the proposed answer states 240 records.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "120 records",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-032",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of manual override limit; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-033",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives sample frequency as 15 Hz, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "15 Hz",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-034",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state calibration vendor; the stated Lab Q is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-035",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives sample frequency as 15 Hz, while the proposed answer states 25 Hz.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "15 Hz",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-036",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of calibration vendor; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-037",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives sensor count as 12, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "12",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-038",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state replacement sensor cost; the stated 35 credits is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-039",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives sensor count as 12, while the proposed answer states 16.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "12",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-040",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of replacement sensor cost; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-041",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives reporting interval as 9 minutes, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "9 minutes",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-042",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state operating license; the stated annual is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-043",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives reporting interval as 9 minutes, while the proposed answer states 20 minutes.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "9 minutes",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-044",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of operating license; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-045",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives hopper capacity as 85 liters, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "85 liters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-046",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state remote control range; the stated 50 meters is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-047",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives hopper capacity as 85 liters, while the proposed answer states 110 liters.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "85 liters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-048",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of remote control range; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-049",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives offline cache size as 3 GB, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "3 GB",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-050",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state service response time; the stated 4 hours is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-051",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives offline cache size as 3 GB, while the proposed answer states 8 GB.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "3 GB",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-052",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of service response time; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-053",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives rotation range as 145 degrees, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "145 degrees",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-054",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state winter efficiency; the stated 72 percent is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-055",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives rotation range as 145 degrees, while the proposed answer states 170 degrees.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "145 degrees",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-056",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of winter efficiency; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-057",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives max speed as 7200 rpm, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "7200 rpm",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-058",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state noise rating; the stated 46 dB is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-059",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives max speed as 7200 rpm, while the proposed answer states 9800 rpm.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "7200 rpm",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-060",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of noise rating; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-061",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives lane count as 11, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "11",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-062",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state reset duration; the stated 30 seconds is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-063",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives lane count as 11, while the proposed answer states 8.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "11",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-064",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of reset duration; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-065",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives session expiry as 22 minutes, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "22 minutes",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-066",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state supported user count; the stated 5000 is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-067",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives session expiry as 22 minutes, while the proposed answer states 45 minutes.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "22 minutes",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-068",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of supported user count; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-069",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives checksum method as SHA-256, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "SHA-256",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-070",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state retrieval fee; the stated 3 credits is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-071",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives checksum method as SHA-256, while the proposed answer states SHA-1.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "SHA-256",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-072",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of retrieval fee; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-073",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives flight ceiling as 310 meters, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "310 meters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-074",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state radio band; the stated 5 GHz is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-075",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives flight ceiling as 310 meters, while the proposed answer states 480 meters.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "310 meters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-076",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of radio band; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-077",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives target humidity as 42 percent, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "42 percent",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-078",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state energy consumption; the stated 90 W is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-079",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives target humidity as 42 percent, while the proposed answer states 55 percent.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "42 percent",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-080",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of energy consumption; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-081",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives record depth as 28 meters, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "28 meters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-082",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state service cycle; the stated monthly is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-083",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives record depth as 28 meters, while the proposed answer states 45 meters.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "28 meters",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-084",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of service cycle; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-085",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives stirring rate as 170 rpm, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "170 rpm",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-086",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state minimum sample size; the stated 3 ml is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-087",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives stirring rate as 170 rpm, while the proposed answer states 220 rpm.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "170 rpm",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-088",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of minimum sample size; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-089",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives antenna gain as 17 dBi, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "17 dBi",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-090",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state storage duration; the stated 1 month is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-091",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives antenna gain as 17 dBi, while the proposed answer states 25 dBi.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "17 dBi",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-092",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of storage duration; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-093",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives alert threshold as 65 C, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "65 C",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-094",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state replacement lifetime; the stated 10 years is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-095",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives alert threshold as 65 C, while the proposed answer states 80 C.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "65 C",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-096",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of replacement lifetime; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-097",
+      "ai_label": "supported",
+      "ai_reason": "The record explicitly gives screen brightness as 680 nits, matching the proposed answer.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "680 nits",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-098",
+      "ai_label": "unsupported",
+      "ai_reason": "The record does not state supply lead time; the stated 2 weeks is not verifiable from the supplied evidence.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-099",
+      "ai_label": "contradicted",
+      "ai_reason": "The record gives screen brightness as 680 nits, while the proposed answer states 950 nits.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "680 nits",
+      "prior_workbook_draft": null
+    },
+    {
+      "case_id": "HOLD-100",
+      "ai_label": "abstention",
+      "ai_reason": "The answer explicitly withholds confirmation of supply lead time; the provided record does not document it.",
+      "ai_confidence": 5,
+      "ai_evidence_value": "Not documented",
+      "prior_workbook_draft": null
+    }
+  ]
+}

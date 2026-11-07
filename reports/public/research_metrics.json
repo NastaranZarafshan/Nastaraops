@@ -1,0 +1,332 @@
+{
+  "report_version": "9.0.0",
+  "data_scope": "100 synthetic cases; 25 shared source entities; 2 completed Qwen repetitions; one human reviewer",
+  "dataset_id": "agentops-holdout-v7-100",
+  "dataset_sha256": "aed93ff49aeddf533f357f55a8a5fd36d8bcaff9879a88489e8de9d1f908af25",
+  "judge_source_sha256": "9cdb1a2d655c8d3cf87eec86cc7a794129219b8fa306fcbae1dfd57de40262f2",
+  "judge_model_tag": "qwen2.5:3b",
+  "runner_version": "2.2.0-anchor-review",
+  "ollama_parameters": {
+    "temperature": 0,
+    "num_ctx": 4096
+  },
+  "human_export_sha256": "3c0401bad5f0dbdf8dcfde0b9142c2b987bf72d3b4e186e3dbf749dd363b211f",
+  "human_export_embedded": false,
+  "human_review": {
+    "first_votes": 100,
+    "spreadsheet_imported_nonblind_assurance": 79,
+    "dashboard_submitted": 21,
+    "cases_with_revisions": 1,
+    "vote_corrections": 1,
+    "curated_gold_agreement_descriptive": 0.99,
+    "curated_gold_disagreements": [
+      "HOLD-021"
+    ],
+    "ai_suggestion_agreement_descriptive": 0.99,
+    "first_vs_curated_metrics": {
+      "total": 100,
+      "correct": 99,
+      "accuracy": 0.99,
+      "macro_f1": 0.99,
+      "per_class": {
+        "supported": {
+          "support": 25,
+          "predicted": 24,
+          "precision": 1.0,
+          "recall": 0.96,
+          "f1": 0.9796
+        },
+        "unsupported": {
+          "support": 25,
+          "predicted": 25,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "contradicted": {
+          "support": 25,
+          "predicted": 25,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "abstention": {
+          "support": 25,
+          "predicted": 26,
+          "precision": 0.9615,
+          "recall": 1.0,
+          "f1": 0.9804
+        }
+      },
+      "confusion_matrix": {
+        "supported": {
+          "supported": 24,
+          "unsupported": 0,
+          "contradicted": 0,
+          "abstention": 1
+        },
+        "unsupported": {
+          "supported": 0,
+          "unsupported": 25,
+          "contradicted": 0,
+          "abstention": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "unsupported": 0,
+          "contradicted": 25,
+          "abstention": 0
+        },
+        "abstention": {
+          "supported": 0,
+          "unsupported": 0,
+          "contradicted": 0,
+          "abstention": 25
+        }
+      }
+    },
+    "initial_vs_latest_label_changed_ids": []
+  },
+  "study": {
+    "repeat_count": 2,
+    "case_count": 100,
+    "total_calls": 200,
+    "coverage": 1.0,
+    "repeat_accuracy": [
+      0.81,
+      0.83
+    ],
+    "repeat_macro_f1": [
+      0.8149,
+      0.8356
+    ],
+    "mean_accuracy": 0.82,
+    "mean_macro_f1": 0.8253,
+    "agreement": 0.98,
+    "wrong_both": 17,
+    "varying": 2,
+    "ci_accuracy_95": [
+      0.745,
+      0.885
+    ],
+    "ci_macro_f1_95": [
+      0.7549,
+      0.8881
+    ],
+    "ci_method": "Source-entity cluster percentile bootstrap; same sampled entities reused across repeats",
+    "ci_iterations": 1200,
+    "ci_seed": 20261104,
+    "repeat_confusion_matrices": [
+      {
+        "supported": {
+          "supported": 15,
+          "unsupported": 10,
+          "contradicted": 0,
+          "abstention": 0
+        },
+        "unsupported": {
+          "supported": 0,
+          "unsupported": 23,
+          "contradicted": 2,
+          "abstention": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "unsupported": 2,
+          "contradicted": 23,
+          "abstention": 0
+        },
+        "abstention": {
+          "supported": 0,
+          "unsupported": 4,
+          "contradicted": 1,
+          "abstention": 20
+        }
+      },
+      {
+        "supported": {
+          "supported": 17,
+          "unsupported": 8,
+          "contradicted": 0,
+          "abstention": 0
+        },
+        "unsupported": {
+          "supported": 0,
+          "unsupported": 23,
+          "contradicted": 2,
+          "abstention": 0
+        },
+        "contradicted": {
+          "supported": 0,
+          "unsupported": 2,
+          "contradicted": 23,
+          "abstention": 0
+        },
+        "abstention": {
+          "supported": 0,
+          "unsupported": 4,
+          "contradicted": 1,
+          "abstention": 20
+        }
+      }
+    ],
+    "first_human_vs_qwen": [
+      {
+        "total": 100,
+        "correct": 81,
+        "accuracy": 0.81,
+        "macro_f1": 0.8149,
+        "per_class": {
+          "supported": {
+            "support": 24,
+            "predicted": 15,
+            "precision": 1.0,
+            "recall": 0.625,
+            "f1": 0.7692
+          },
+          "unsupported": {
+            "support": 25,
+            "predicted": 39,
+            "precision": 0.5897,
+            "recall": 0.92,
+            "f1": 0.7188
+          },
+          "contradicted": {
+            "support": 25,
+            "predicted": 26,
+            "precision": 0.8846,
+            "recall": 0.92,
+            "f1": 0.902
+          },
+          "abstention": {
+            "support": 26,
+            "predicted": 20,
+            "precision": 1.0,
+            "recall": 0.7692,
+            "f1": 0.8696
+          }
+        },
+        "confusion_matrix": {
+          "supported": {
+            "supported": 15,
+            "unsupported": 9,
+            "contradicted": 0,
+            "abstention": 0
+          },
+          "unsupported": {
+            "supported": 0,
+            "unsupported": 23,
+            "contradicted": 2,
+            "abstention": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "unsupported": 2,
+            "contradicted": 23,
+            "abstention": 0
+          },
+          "abstention": {
+            "supported": 0,
+            "unsupported": 5,
+            "contradicted": 1,
+            "abstention": 20
+          }
+        }
+      },
+      {
+        "total": 100,
+        "correct": 83,
+        "accuracy": 0.83,
+        "macro_f1": 0.8357,
+        "per_class": {
+          "supported": {
+            "support": 24,
+            "predicted": 17,
+            "precision": 1.0,
+            "recall": 0.7083,
+            "f1": 0.8293
+          },
+          "unsupported": {
+            "support": 25,
+            "predicted": 37,
+            "precision": 0.6216,
+            "recall": 0.92,
+            "f1": 0.7419
+          },
+          "contradicted": {
+            "support": 25,
+            "predicted": 26,
+            "precision": 0.8846,
+            "recall": 0.92,
+            "f1": 0.902
+          },
+          "abstention": {
+            "support": 26,
+            "predicted": 20,
+            "precision": 1.0,
+            "recall": 0.7692,
+            "f1": 0.8696
+          }
+        },
+        "confusion_matrix": {
+          "supported": {
+            "supported": 17,
+            "unsupported": 7,
+            "contradicted": 0,
+            "abstention": 0
+          },
+          "unsupported": {
+            "supported": 0,
+            "unsupported": 23,
+            "contradicted": 2,
+            "abstention": 0
+          },
+          "contradicted": {
+            "supported": 0,
+            "unsupported": 2,
+            "contradicted": 23,
+            "abstention": 0
+          },
+          "abstention": {
+            "supported": 0,
+            "unsupported": 5,
+            "contradicted": 1,
+            "abstention": 20
+          }
+        }
+      }
+    ],
+    "stable_wrong_ids": [
+      "HOLD-005",
+      "HOLD-009",
+      "HOLD-013",
+      "HOLD-018",
+      "HOLD-019",
+      "HOLD-020",
+      "HOLD-021",
+      "HOLD-030",
+      "HOLD-031",
+      "HOLD-033",
+      "HOLD-040",
+      "HOLD-060",
+      "HOLD-065",
+      "HOLD-073",
+      "HOLD-080",
+      "HOLD-093",
+      "HOLD-100"
+    ],
+    "discordant_repeat_ids": [
+      "HOLD-001",
+      "HOLD-069"
+    ]
+  },
+  "method_notes": [
+    "Public report uses aggregated and case-ID-only evidence; never embeds original human-review export.",
+    "Model predictions per case are inferred from exhaustive 'wrong in all' and repeat disagreement sets; independently checked against both saved confusion matrices.",
+    "First recorded human decisions are historical snapshots; later corrections do not silently overwrite the primary score.",
+    "Spreadsheet-imported decisions are self-reported human reviews but cannot be verified as blind; AI suggestions and curated labels may have been seen before some votes.",
+    "Curated V7 labels are author-created synthetic references, not independently adjudicated gold; agreement is descriptive, not external validation.",
+    "Do not infer model performance on real customers, prompt-injection security or production quality from this synthetic suite.",
+    "Frozen model tag is not an immutable Ollama weight digest; pin it in a reproducibility manifest on the test machine."
+  ]
+}

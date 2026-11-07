@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0d1424" />
+  <meta name="description" content="NastaraOps — a local-first enterprise multi-agent AI platform with grounded evaluation and human oversight." />
+  <link rel="icon" href="/assets/nastaraops-icon.svg" type="image/svg+xml" />
+  <title>NastaraOps — Enterprise AI Platform</title>
+  <link rel="stylesheet" href="/assets/styles.css?v=brand1" />
+</head>
+<body>
+  <svg class="icon-sprite" width="0" height="0" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-flower" viewBox="0 0 48 48">
+      <g fill="currentColor" fill-opacity=".62" stroke="currentColor" stroke-width=".6">
+        <path d="M24 24C18.7 18 18 11.2 24 6.5C30 11.2 29.3 18 24 24Z"/>
+        <path d="M24 24C18.7 18 18 11.2 24 6.5C30 11.2 29.3 18 24 24Z" transform="rotate(72 24 24)"/>
+        <path d="M24 24C18.7 18 18 11.2 24 6.5C30 11.2 29.3 18 24 24Z" transform="rotate(144 24 24)"/>
+        <path d="M24 24C18.7 18 18 11.2 24 6.5C30 11.2 29.3 18 24 24Z" transform="rotate(216 24 24)"/>
+        <path d="M24 24C18.7 18 18 11.2 24 6.5C30 11.2 29.3 18 24 24Z" transform="rotate(288 24 24)"/>
+      </g>
+      <path d="m24 19 5 5-5 5-5-5Z" fill="#303252" stroke="#f7dfec" stroke-width="1"/>
+    </symbol>
+    <symbol id="i-overview" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.4"/><rect x="14" y="3" width="7" height="7" rx="1.4"/><rect x="3" y="14" width="7" height="7" rx="1.4"/><rect x="14" y="14" width="7" height="7" rx="1.4"/></symbol>
+    <symbol id="i-workflows" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="5" rx="1.3"/><rect x="14" y="16" width="7" height="5" rx="1.3"/><path d="M6.5 8v5a3 3 0 0 0 3 3H14M17.5 16v-5a3 3 0 0 0-3-3H10"/></symbol>
+    <symbol id="i-knowledge" viewBox="0 0 24 24"><path d="M12 7.5c-2.8-2-5.5-2.3-9-1.7v13c3.5-.6 6.2-.3 9 1.7 2.8-2 5.5-2.3 9-1.7v-13c-3.5-.6-6.2-.3-9 1.7ZM12 7.5v13"/></symbol>
+    <symbol id="i-evals" viewBox="0 0 24 24"><path d="M3 20h18M5 16V9m5 7V4m5 12v-5m5 5V7"/><path d="m3 20 4-2 3 1 5-3 5 2"/></symbol>
+    <symbol id="i-benchmarks" viewBox="0 0 24 24"><path d="M4 20h16M6 17l4-5 3 2 5-8"/><path d="M15 6h3v3"/><circle cx="6" cy="17" r="1"/></symbol>
+    <symbol id="i-reliability" viewBox="0 0 24 24"><path d="m10 2-2 8-5 2 8 3 2 7 3-9 5-2-8-3-3-6Z"/><path d="M3 3l2 2M19 20l2 2"/></symbol>
+    <symbol id="i-human" viewBox="0 0 24 24"><path d="M3 20v-2c0-2.2 2.4-4 5.5-4h3M10 13a5 5 0 1 1 0-10 5 5 0 0 1 0 10Z"/><path d="m14 18 2.2 2.2L21 15"/></symbol>
+    <symbol id="i-single" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M5 21v-1a7 7 0 0 1 14 0v1Z"/></symbol>
+    <symbol id="i-reports" viewBox="0 0 24 24"><path d="M7 2h7l5 5v14a1 1 0 0 1-1 1H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Z"/><path d="M14 2v6h5M9 13h6M9 17h6"/></symbol>
+    <symbol id="i-approvals" viewBox="0 0 24 24"><path d="m12 2 8 4v6c0 5-3.2 8-8 10-4.8-2-8-5-8-10V6l8-4Z"/><path d="m8 12 3 3 5-6"/></symbol>
+    <symbol id="i-memory" viewBox="0 0 24 24"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 2v3m6-3v3M9 19v3m6-3v3M2 9h3M2 15h3M19 9h3m-3 6h3"/><path d="M9 9h6v6H9Z"/></symbol>
+    <symbol id="i-audit" viewBox="0 0 24 24"><path d="M4 4h16v16H4zM8 8h8M8 12h8M8 16h5"/></symbol>
+  </svg>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <a class="brand" href="#overview" data-brand-home aria-label="NastaraOps home">
+        <span class="brand-icon"><svg aria-hidden="true" viewBox="0 0 48 48"><use href="#i-flower"></use></svg></span>
+        <span class="brand-copy"><span class="brand-name">Nastara<span class="brand-accent">Ops</span></span><small>ENTERPRISE AI PLATFORM</small></span>
+      </a>
+      <div class="sidebar-scroll">
+        <div class="nav-group">
+          <div class="nav-caption">WORKSPACE</div>
+          <nav aria-label="Workspace navigation">
+        <button type="button" class="nav-link active" data-tab="overview"><svg class="nav-icon" aria-hidden="true"><use href="#i-overview"></use></svg><span class="nav-text">Overview</span></button>
+        <button type="button" class="nav-link" data-tab="workflows"><svg class="nav-icon" aria-hidden="true"><use href="#i-workflows"></use></svg><span class="nav-text">Workflows</span></button>
+        <button type="button" class="nav-link" data-tab="knowledge"><svg class="nav-icon" aria-hidden="true"><use href="#i-knowledge"></use></svg><span class="nav-text">Knowledge Base</span></button>
+          </nav>
+        </div>
+        <div class="nav-group">
+          <div class="nav-caption">EVALUATION &amp; RESEARCH</div>
+          <nav aria-label="Evaluation and research navigation">
+        <button type="button" class="nav-link" data-tab="evaluations"><svg class="nav-icon" aria-hidden="true"><use href="#i-evals"></use></svg><span class="nav-text">Evaluations</span></button>
+        <button type="button" class="nav-link" data-tab="benchmarks"><svg class="nav-icon" aria-hidden="true"><use href="#i-benchmarks"></use></svg><span class="nav-text">Benchmarks</span></button>
+        <button type="button" class="nav-link" data-tab="reliability"><svg class="nav-icon" aria-hidden="true"><use href="#i-reliability"></use></svg><span class="nav-text">Reliability Lab</span></button>
+        <button type="button" class="nav-link" data-tab="human_review"><svg class="nav-icon" aria-hidden="true"><use href="#i-human"></use></svg><span class="nav-text">Blinded Review</span></button>
+        <button type="button" class="nav-link" data-tab="single_review"><svg class="nav-icon" aria-hidden="true"><use href="#i-single"></use></svg><span class="nav-text">My Reviews</span></button>
+        <button type="button" class="nav-link" data-tab="research_v9"><svg class="nav-icon" aria-hidden="true"><use href="#i-reports"></use></svg><span class="nav-text">Research Reports</span></button>
+          </nav>
+        </div>
+        <div class="nav-group">
+          <div class="nav-caption">GOVERNANCE</div>
+          <nav aria-label="Governance navigation">
+        <button type="button" class="nav-link" data-tab="approvals"><svg class="nav-icon" aria-hidden="true"><use href="#i-approvals"></use></svg><span class="nav-text">Approvals</span><span id="navPending" class="nav-count">0</span></button>
+        <button type="button" class="nav-link" data-tab="memory"><svg class="nav-icon" aria-hidden="true"><use href="#i-memory"></use></svg><span class="nav-text">Memory</span></button>
+        <button type="button" class="nav-link" data-tab="audit"><svg class="nav-icon" aria-hidden="true"><use href="#i-audit"></use></svg><span class="nav-text">Audit Trail</span></button>
+          </nav>
+        </div>
+      </div>
+      <div class="sidebar-bottom">
+        <div class="runtime"><span id="healthDot" class="live-dot"></span><span id="healthText">Checking connection</span></div>
+        <div class="signature"><span class="signature-label">DESIGNED &amp; BUILT BY</span><strong>Nastaran Zarafshan</strong><small>Inspired by the Nastaran flower</small></div>
+      </div>
+    </aside>
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="breadcrumbs">NastaraOps <span>/</span> <b id="breadcrumb">Overview</b></div>
+        <div class="top-actions"><span id="modeChip" class="mode-chip">MODE: —</span><span id="lastSync" class="last-sync">Not synced</span><button id="refreshBtn" class="icon-btn" title="Refresh">↻</button><button id="newTaskTop" class="btn btn-primary">＋ New workflow</button></div>
+      </header>
+      <main class="content">
+        <section id="connectPanel" class="connect-panel">
+          <div class="connect-symbol">◈</div>
+          <div><h2>Connect to NastaraOps</h2><p>Enter the API key from your <code>.env</code>. The key is kept in this browser tab's memory, not local storage.</p></div>
+          <form id="connectForm" class="connect-form"><input id="apiKey" type="password" placeholder="Your API key" autocomplete="off" required aria-label="API key" /><button class="btn btn-primary" type="submit">Connect</button></form>
+        </section>
+        <div id="workspace" hidden>
+          <section id="overview" class="tab-page active">
+            <div class="page-heading"><div><div class="eyebrow">LIVE OPERATIONS</div><h1>Command center<span class="title-dot">.</span></h1><p>A unified view of intelligent business automation.</p></div><span class="header-pill"><span class="live-dot"></span> Live operational data</span></div>
+            <div class="stat-grid">
+              <article class="stat"><div class="stat-top">TOTAL WORKFLOWS <span>◫</span></div><strong id="sTotal">—</strong><small>Processed and in progress</small></article>
+              <article class="stat"><div class="stat-top">COMPLETED <span>✓</span></div><strong id="sCompleted">—</strong><small><span id="sRate">0%</span> completion rate</small></article>
+              <article class="stat attention"><div class="stat-top">NEEDS APPROVAL <span>◇</span></div><strong id="sPending">—</strong><small>Awaiting human decision</small></article>
+              <article class="stat"><div class="stat-top">AVERAGE EXECUTION <span>◷</span></div><strong id="sLatency">—</strong><small>Processing time (approx.)</small></article>
+            </div>
+            <div class="overview-grid">
+              <section class="panel"><div class="panel-heading"><div><h2>Agent distribution</h2><p>Requests by specialized workflow type</p></div><span class="panel-tag">ALL TIME</span></div><div id="distribution" class="distribution"></div></section>
+              <section class="panel architecture"><div class="panel-heading"><div><h2>Execution architecture</h2><p>Stateful orchestration with oversight</p></div><span class="panel-tag">SYSTEM</span></div><div class="pipeline"><div class="pipeline-box"><span>01</span><b>Request intake</b><small>FastAPI + Redis</small></div><div class="pipeline-line">↓</div><div class="pipeline-box"><span>02</span><b>Specialist agents</b><small>LangGraph + MCP</small></div><div class="pipeline-line">↓</div><div class="pipeline-box approved-box"><span>03</span><b>Policy + human gate</b><small>Interrupt / Resume</small></div><div class="pipeline-line">↓</div><div class="pipeline-box"><span>04</span><b>Persist + audit</b><small>PostgreSQL</small></div></div></section>
+            </div>
+            <section class="panel full"><div class="panel-heading"><div><h2>Recent activity</h2><p>Latest workflows across all agents</p></div><button class="text-button" data-go="workflows">View all →</button></div><div id="recentTasks"></div></section>
+          </section>
+          <section id="workflows" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">WORKFLOW ENGINE</div><h1>All workflows<span class="title-dot">.</span></h1><p>Track agent execution and inspect structured outputs.</p></div><button class="btn btn-primary new-task">＋ Create workflow</button></div>
+            <div class="panel full"><div class="filter-bar"><input id="taskSearch" placeholder="Search workflows..." aria-label="Search workflows"/><select id="statusFilter" aria-label="Status filter"><option value="">All statuses</option><option value="queued">Queued</option><option value="running">Running</option><option value="awaiting_approval">Awaiting approval</option><option value="completed">Completed</option><option value="rejected">Rejected</option><option value="failed">Failed</option></select></div><div id="allTasks"></div></div>
+          </section>
+          <section id="knowledge" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">RETRIEVAL AUGMENTED GENERATION</div><h1>Knowledge base<span class="title-dot">.</span></h1><p>Index trusted company documents and retrieve cited evidence for your agents.</p></div><span class="header-pill">Ollama embeddings · Qdrant vector search</span></div>
+            <div class="knowledge-grid">
+              <section class="panel knowledge-upload">
+                <div class="panel-heading"><div><h2>Add a knowledge source</h2><p>PDF, Word, Markdown or UTF-8 text · requires Ollama + bge-m3</p></div><span class="panel-tag">INGEST</span></div>
+                <form id="knowledgeUploadForm" class="form-fields knowledge-form">
+                  <label class="form-field">Document title<input name="title" placeholder="e.g. Product specifications and returns policy" maxlength="180"></label>
+                  <label class="form-field">Choose document<input type="file" name="file" accept=".pdf,.docx,.md,.txt" required><span class="form-hint">Scanned PDFs need OCR before upload. Only documents you trust should be indexed.</span></label>
+                  <div class="modal-footer"><button class="btn btn-primary" type="submit">＋ Upload and index</button></div>
+                </form>
+              </section>
+              <section class="panel knowledge-documents">
+                <div class="panel-heading"><div><h2>Indexed documents</h2><p>PostgreSQL metadata · Qdrant chunks</p></div><span id="knowledgeCount" class="panel-tag">0 SOURCES</span></div>
+                <div id="knowledgeDocuments" class="knowledge-list"><div class="empty">No knowledge documents indexed yet.</div></div>
+              </section>
+            </div>
+            <section class="panel full knowledge-search">
+              <div class="panel-heading"><div><h2>Test semantic retrieval</h2><p>Search the indexed documents before using them in a workflow.</p></div><span class="panel-tag">RETRIEVAL TEST</span></div>
+              <form id="knowledgeSearchForm" class="filter-bar"><input name="query" placeholder="Ask a question about your company documents..." minlength="2" maxlength="3000" required><button class="btn btn-primary" type="submit">Search knowledge</button></form>
+              <div id="knowledgeSearchResults" class="knowledge-results"><div class="empty">Enter a question to inspect retrieved evidence and source relevance.</div></div>
+            </section>
+          </section>
+          <section id="evaluations" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">MODEL QUALITY &amp; EVIDENCE</div><h1>Evaluations<span class="title-dot">.</span></h1><p>Inspectable, stored diagnostics — scores appear only when their required evidence exists.</p></div><span class="header-pill">Structural checks · Optional Qwen judge</span></div>
+            <div class="stat-grid eval-stats">
+              <article class="stat"><div class="stat-top">TASKS EVALUATED <span>◉</span></div><strong id="evTaskCount">—</strong><small>Most recent 250 runs</small></article>
+              <article class="stat"><div class="stat-top">QUESTION TRACKING <span>◎</span></div><strong id="evQuestionRate">N/A</strong><small id="evQuestionCoverage">No scored tasks</small></article>
+              <article class="stat"><div class="stat-top">CITATION ID INTEGRITY <span>◇</span></div><strong id="evCitationRate">N/A</strong><small id="evCitationCoverage">Structural ID check only</small></article>
+              <article class="stat attention"><div class="stat-top">JUDGE RUNS <span>◷</span></div><strong id="evJudgeCount">—</strong><small>Qwen judged on demand</small></article>
+            </div>
+            <div class="knowledge-grid eval-grid">
+              <section class="panel">
+                <div class="panel-heading"><div><h2>Run an evaluation</h2><p>Deterministic diagnostics, or optional semantic assessment</p></div><span class="panel-tag">EVALUATOR v1</span></div>
+                <form id="evaluationForm" class="form-fields knowledge-form">
+                  <label class="form-field">Completed workflow<select name="task_id" id="evaluationTask" required></select></label>
+                  <label class="form-field">Gold relevant chunk IDs (optional)<textarea name="gold_source_ids" rows="2" placeholder="Source UUIDs separated by commas — enables reference context precision and recall"></textarea><span class="form-hint">Do not enter document IDs; use source/chunk IDs from retrieval results. Empty means N/A, not zero.</span></label>
+                  <label class="eval-check"><input type="checkbox" name="use_llm_judge" /><span>Run Qwen LLM-as-a-Judge (slower, experimental)</span></label>
+                  <p class="form-hint">LLM judge uses exact source text from Qdrant. Results are estimates, not ground truth. No external action is taken.</p>
+                  <div class="modal-footer"><button class="btn btn-primary" type="submit">Run evaluation</button></div>
+                </form>
+              </section>
+              <section class="panel">
+                <div class="panel-heading"><div><h2>Metric availability</h2><p>Measured versus not measured</p></div><span class="panel-tag">METHOD</span></div>
+                <div class="eval-definitions">
+                  <p><b>Question tracking &amp; citation ID integrity</b><small>Deterministic structural checks, automatically evaluated after successful completion.</small></p>
+                  <p><b>Context precision &amp; recall</b><small>Require human-provided relevant source/chunk IDs as reference labels.</small></p>
+                  <p><b>Faithfulness &amp; answer relevancy</b><small>Optional Qwen judgement using retrieved evidence; manual review still recommended.</small></p>
+                  <p><b>Unsupported claim rate &amp; citation accuracy</b><small>Require claim-level semantic judgement; not inferred from similarity score.</small></p>
+                </div>
+              </section>
+            </div>
+            <section class="panel full">
+              <div class="panel-heading"><div><h2>Evaluation history</h2><p>Stored in PostgreSQL, with evaluator version and methodology</p></div><span id="evaluationCount" class="panel-tag">0 RUNS</span></div>
+              <div id="evaluationList"><div class="empty">No evaluations recorded yet.</div></div>
+            </section>
+          </section>
+          <section id="benchmarks" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">REPRODUCIBLE LLM EVALUATION</div><h1>Benchmarks<span class="title-dot">.</span></h1><p>Evaluate Qwen against curated synthetic reference labels, with explicit coverage and errors.</p></div><span class="header-pill">PostgreSQL · Redis worker</span></div>
+            <div class="stat-grid eval-stats benchmark-stats">
+              <article class="stat"><div class="stat-top">REFERENCE CASES <span>◫</span></div><strong id="bmTotal">—</strong><small>Authored, synthetic fixtures</small></article>
+              <article class="stat"><div class="stat-top">JUDGED COVERAGE <span>◷</span></div><strong id="bmCoverage">N/A</strong><small id="bmCoverageHint">No runs yet</small></article>
+              <article class="stat"><div class="stat-top">MACRO F1 <span>◎</span></div><strong id="bmF1">N/A</strong><small>Compared against curated reference labels</small></article>
+              <article class="stat attention"><div class="stat-top">UNSAFE RELEASE PREDICTIONS <span>◇</span></div><strong id="bmUnsafe">N/A</strong><small>Source-policy gate, not real authorization</small></article>
+            </div>
+            <div class="knowledge-grid eval-grid">
+              <section class="panel"><div class="panel-heading"><div><h2>Run the local Qwen benchmark</h2><p>One queued run: 40 independent text-entailment cases</p></div><span class="panel-tag">GOLD SET</span></div>
+                <div class="knowledge-form form-fields"><p class="form-hint">This suite measures the evidence judge, <b>not</b> the end-to-end RAG retrieval system. No real emails or company documents are sent. A model run can take several minutes on GPU.</p>
+                <div id="bmDatasetInfo" class="benchmark-dataset">Loading fixture manifest…</div>
+                <label class="form-field">Judge profile
+                  <select id="bmRunnerProfile" aria-label="Benchmark judge profile">
+                    <option value="calibrated" selected>Calibrated judge · source-anchored evidence + contradiction review</option>
+                    <option value="baseline">Baseline judge · original single-step Qwen</option>
+                  </select>
+                </label>
+                <div class="modal-footer"><button id="startBenchmark" class="btn btn-primary" type="button">▶ Queue Qwen benchmark</button></div><div id="bmQueueFeedback" class="benchmark-feedback" role="status" aria-live="polite">Click the button to queue the 40-case benchmark. Its status will appear here.</div></div></section>
+              <section class="panel"><div class="panel-heading"><div><h2>What is actually measured</h2><p>Evidence support ≠ source trust ≠ answer release</p></div><span class="panel-tag">METHOD</span></div>
+                <div class="eval-definitions"><p><b>Evidence verdict</b><small>Supported, unsupported, contradicted, abstention; compared with reference labels.</small></p>
+                <p><b>Source trust policy</b><small>Demo or untrusted evidence is never approved for external communication, even if it textually supports an answer.</small></p>
+                <p><b>Confusion matrix / per-class P·R·F1</b><small>Only successfully judged cases count. A failed model call lowers coverage; it does not become an invented prediction.</small></p>
+                <p><b>Retrieval metrics</b><small>Calculated from fixture source IDs only. They do not benchmark the live Qdrant retriever.</small></p></div></section>
+            </div>
+            <section class="panel full"><div class="panel-heading"><div><h2>Benchmark history</h2><p>Append-only benchmark runs, source hash and model version</p></div><span id="bmRunCount" class="panel-tag">0 RUNS</span></div><div id="benchmarkList"><div class="empty">Run the first benchmark to see scores.</div></div></section>
+            <section class="panel full" style="margin-top:18px"><div class="panel-heading"><div><h2>Baseline vs calibrated · paired comparison</h2><p>Only common scored cases; same model and exact dataset checksum. No scores are inferred for failures.</p></div><span id="bmCompareTag" class="panel-tag">NOT AVAILABLE</span></div><div id="bmCompare" class="benchmark-compare"><div class="empty">Finish a baseline and calibrated run to compare them.</div></div></section>
+            <section class="panel full" style="margin-top:18px"><div class="panel-heading"><div><h2>Latest run · confusion matrix</h2><p>Rows are gold labels, columns are Qwen predictions</p></div><span id="bmMatrixTag" class="panel-tag">NO RUN</span></div><div id="bmMatrix"><div class="empty">No predictions available yet.</div></div></section>
+          </section>
+
+          <section id="reliability" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">FROZEN JUDGE · NEW HOLDOUT DATA</div><h1>Reliability studies<span class="title-dot">.</span></h1><p>100 unseen synthetic cases, repeated evaluation, case-level bootstrap intervals and scientific exports.</p></div><span class="header-pill">Frozen judge · reproducible</span></div>
+            <div class="stat-grid eval-stats">
+              <article class="stat"><div class="stat-top">HOLDOUT CASES <span>◫</span></div><strong id="v7Cases">100</strong><small>25 cases per evidence class</small></article>
+              <article class="stat"><div class="stat-top">PROCESSED CALLS <span>◷</span></div><strong id="v7Progress">—</strong><small id="v7ProgressHint">New dataset, no history yet</small></article>
+              <article class="stat"><div class="stat-top">MEAN MACRO-F1 <span>◎</span></div><strong id="v7F1">N/A</strong><small>Matched scored cases only</small></article>
+              <article class="stat"><div class="stat-top">REPEAT AGREEMENT <span>◇</span></div><strong id="v7Agreement">N/A</strong><small>Identical label across repetitions</small></article>
+            </div>
+            <div class="knowledge-grid eval-grid">
+              <section class="panel"><div class="panel-heading"><div><h2>Queue a reliability study</h2><p>Sequential repeated calls on one local GPU</p></div><span class="panel-tag">HOLDOUT</span></div>
+                <div class="knowledge-form form-fields">
+                  <div id="v7Manifest" class="benchmark-dataset">Loading new holdout manifest…</div>
+                  <label class="form-field">Repetitions
+                    <select id="v7Repeats" aria-label="Number of benchmark repetitions"><option value="2">2 runs · 200 cases total</option><option value="3" selected>3 runs · 300 cases total</option><option value="5">5 runs · 500 cases total</option></select>
+                  </label>
+                  <p class="form-hint">The judge source code remains pinned to the validated release. All repetitions use the same 100 reference cases; they do not become 300 independent examples. No private documents or outbound customer actions.</p>
+                  <div class="modal-footer"><button class="btn btn-primary" type="button" id="v7Queue">▶ Queue holdout study</button></div>
+                  <div class="benchmark-feedback" id="v7QueueFeedback" role="status" aria-live="polite">Ready to queue the first 100-case holdout reliability study.</div>
+                </div>
+              </section>
+              <section class="panel"><div class="panel-heading"><div><h2>What the report includes</h2><p>Transparency first; no inferred or fabricated model scores</p></div><span class="panel-tag">METHOD</span></div>
+                <div class="eval-definitions">
+                  <p><b>Frozen judge, separate test set</b><small>The evidence policy is unchanged. New authored sources and labels were not used for prompt tuning; annotations are not independently human-adjudicated.</small></p>
+                  <p><b>Confidence intervals</b><small>Source-entity cluster bootstrap: resample 25 documents and reuse the same sampled entities across repeats. Descriptive intervals; not general-population certainty.</small></p>
+                  <p><b>Reliability</b><small>Mean F1, run-to-run deviation, exact label agreement, case disagreements and consistently wrong cases.</small></p>
+                  <p><b>Integrity & exports</b><small>Dataset and judge SHA256 plus downloadable Markdown and CSV reports. Model weight digest must be recorded separately.</small></p>
+                </div>
+              </section>
+            </div>
+            <section class="panel full"><div class="panel-heading"><div><h2>Reliability study history</h2><p>Source hashes, per-run progress and immutable child benchmark records</p></div><span id="v7RunCount" class="panel-tag">0 STUDIES</span></div><div id="v7Studies" class="reliability-history"><div class="empty">No studies yet.</div></div></section>
+            <section class="panel full" style="margin-top:18px"><div class="panel-heading"><div><h2>Selected study · scientific report</h2><p>Case-level bootstrap and disagreements, with explicit coverage.</p></div><span id="v7ReportTag" class="panel-tag">NO REPORT</span></div>
+              <div id="v7Report"><div class="empty">Select a study to view the report.</div></div>
+              <div id="v7Exports" class="v7-exports" hidden><button type="button" class="btn btn-outline" id="v7ExportMd">↓ Markdown</button><button type="button" class="btn btn-outline" id="v7ExportCsv">↓ CSV</button><button type="button" class="btn btn-outline" id="v7ExportJson">↓ JSON</button><button type="button" class="btn btn-outline" id="v7ExportPredictions">↓ Per-case CSV</button></div>
+            </section>
+          </section>
+          <section id="human_review" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">HUMAN-IN-THE-LOOP · BLINDED CASE REVIEW</div><h1>Blinded review<span class="title-dot">.</span></h1><p>100 synthetic cases · two independent votes · conflicts require third-person adjudication · AI labels never count as human reviews.</p></div><span class="header-pill">Frozen model evaluation</span></div>
+            <div class="stat-grid eval-stats">
+              <article class="stat"><div class="stat-top">REVIEWER 1 <span>①</span></div><strong id="h8R1">0/100</strong><small>Confirmed, append-only votes</small></article>
+              <article class="stat"><div class="stat-top">REVIEWER 2 <span>②</span></div><strong id="h8R2">0/100</strong><small>Separate reviewer identity</small></article>
+              <article class="stat"><div class="stat-top">FINALIZED <span>✓</span></div><strong id="h8Final">0/100</strong><small>Agreement or adjudication</small></article>
+              <article class="stat attention"><div class="stat-top">CONFLICTS <span>◇</span></div><strong id="h8Conflicts">0</strong><small id="h8Kappa">κ: N/A</small></article>
+            </div>
+            <section class="panel full" style="margin-bottom:18px">
+              <div class="panel-heading"><div><h2>Review identity &amp; blinding</h2><p>Use different identifiers for the two reviewers. Reviewer 2 cannot read Reviewer 1's choice until both submit.</p></div><span class="panel-tag">RESEARCH PROTOCOL</span></div>
+              <div class="h8-controls">
+                <label class="form-field">Reviewer ID<input id="h8Identity" type="text" placeholder="e.g. reviewer-01" maxlength="80" autocomplete="off" /></label>
+                <label class="form-field">Review role<select id="h8Role"><option value="reviewer1">Reviewer 1 — first blinded vote</option><option value="reviewer2">Reviewer 2 — independent blinded vote</option><option value="adjudicator">Adjudicator — resolve conflicts</option></select></label>
+                <label class="form-field">Case status<select id="h8Filter"><option value="all">All cases</option><option value="pending">Needs my vote</option><option value="unreviewed">Unreviewed</option><option value="one_review">One human vote</option><option value="agreed">Human agreement</option><option value="conflict">Conflict</option><option value="adjudicated">Adjudicated</option></select></label>
+                <label class="form-field">Search<input id="h8Search" type="search" placeholder="HOLD-020 / topic..." aria-label="Search review cases" /></label>
+              </div>
+              <p class="form-hint h8-disclaimer">Blinding is enforced in the normal review API response; this local demo has one shared API key and self-declared reviewer names. It is not independent identity verification. The 20 prior Excel votes are drafts, not confirmed reviews.</p>
+            </section>
+            <div class="h8-workbench">
+              <section class="panel"><div class="panel-heading"><div><h2>Case queue</h2><p>Choose one case at a time</p></div><span id="h8ListCount" class="panel-tag">0 CASES</span></div>
+                <div id="h8CaseList" class="h8-case-list"><div class="empty">Connect to load the blinded review queue.</div></div>
+              </section>
+              <section class="panel h8-review-panel"><div class="panel-heading"><div><h2 id="h8CaseTitle">Select a case</h2><p id="h8CaseHint">Read candidate, then compare the literal source text.</p></div><span id="h8CaseStatus" class="panel-tag">BLIND</span></div>
+                <div id="h8CaseBody" class="h8-case-body"><div class="empty">No case selected yet.</div></div>
+                <form id="h8DecisionForm" class="h8-decision-form form-fields" hidden>
+                  <label class="form-field">Your evidence verdict<select id="h8Label" required><option value="">Select a label</option><option value="supported">Supported — explicitly entailed</option><option value="unsupported">Unsupported — missing evidence</option><option value="contradicted">Contradicted — opposing evidence</option><option value="abstention">Abstention — declines to assert value</option></select></label>
+                  <label class="form-field">Evidence-based explanation<textarea id="h8Reason" required minlength="12" maxlength="2000" rows="3" placeholder="Quote or explain the relevant part of the source; do not use AI suggestions before voting."></textarea></label>
+                  <label class="form-field">Confidence (1–5)<select id="h8Confidence"><option value="5">5 — Very confident</option><option value="4">4 — Confident</option><option value="3">3 — Moderate</option><option value="2">2 — Low</option><option value="1">1 — Uncertain</option></select></label>
+                  <div class="modal-footer"><button type="button" id="h8Save" class="btn btn-primary">Save human decision</button></div>
+                  <div id="h8Feedback" class="benchmark-feedback" role="status" aria-live="polite">No decision submitted yet.</div>
+                </form>
+              </section>
+            </div>
+            <section class="panel full" style="margin-top:18px"><div class="panel-heading"><div><h2>Adjudicated evidence report</h2><p>Only double-reviewed / resolved cases; missing cases cannot inflate accuracy.</p></div><span class="panel-tag">REPRODUCIBILITY</span></div>
+              <div id="h8Summary" class="benchmark-summary"><span>Awaiting review data.</span></div>
+              <div class="h8-exports"><button id="h8Export" type="button" class="btn btn-outline">↓ Export human review CSV</button><label class="form-field">Compare to reliability study<select id="h8Study"><option value="">Choose a completed study</option></select></label><button id="h8Compare" type="button" class="btn btn-outline">Compute matched-case metrics</button></div>
+              <div id="h8Comparison" class="h8-comparison"><div class="empty">After human adjudication, select a reliability study for an explicitly partial comparison.</div></div>
+            </section>
+          </section>
+
+          <section id="single_review" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">SINGLE HUMAN REVIEWER · AUDITABLE DECISIONS</div>
+              <h1>My reviews<span class="title-dot">.</span></h1>
+              <p>Review 100 synthetic cases alone. Your first recorded vote is preserved for model comparison; no fake Reviewer 2 is required.</p></div><span class="header-pill">Frozen Qwen Judge · 2.2.0</span></div>
+            <div class="stat-grid eval-stats">
+              <article class="stat"><div class="stat-top">HUMAN REVIEWED <span>①</span></div><strong id="s81Done">—</strong><small>First recorded votes; earlier reviews may contain draft exposure</small></article>
+              <article class="stat"><div class="stat-top">REMAINING <span>◇</span></div><strong id="s81Pending">—</strong><small>Not yet labeled by you</small></article>
+              <article class="stat"><div class="stat-top">AI AGREEMENT <span>≈</span></div><strong id="s81Agreement">—</strong><small>Assistant suggestions, on your voted cases only</small></article>
+              <article class="stat"><div class="stat-top">REVISIONS <span>↺</span></div><strong id="s81Revisions">—</strong><small>Append-only corrections, separate from first vote</small></article>
+            </div>
+            <section class="panel full" style="margin-bottom:18px">
+              <div class="panel-heading"><div><h2>Single-review protocol</h2><p>Reuse exactly the Reviewer 1 ID used for your previous 20 votes. Recommendations remain blinded until your first saved vote.</p></div><span class="panel-tag">NO SECOND REVIEWER</span></div>
+              <div class="s81-controls">
+                <label class="form-field">Your existing Reviewer 1 ID<input id="s81Identity" type="text" value="reviewer-01" maxlength="80" autocomplete="off" /></label>
+                <label class="form-field">Case filter<select id="s81Filter"><option value="pending">Needs my vote</option><option value="all">All 100 cases</option><option value="reviewed">Reviewed by me</option><option value="locked">Assigned to another ID</option></select></label>
+                <label class="form-field">Search cases<input id="s81Search" type="search" placeholder="HOLD-021, topic..." /></label>
+                <button type="button" id="s81Reload" class="btn btn-outline">Refresh reviews</button>
+              </div>
+              <p class="form-hint h8-disclaimer">For research transparency: one human vote is not inter-rater agreement or adjudicated gold. The first blind vote is the primary reference even if you later revise it after seeing AI suggestions. Avoid reviewing the same case with multiple aliases.</p>
+            </section>
+            <section class="panel full" id="s82ImportPanel" style="margin:18px 0">
+              <div class="panel-heading"><div><h2>Bulk import human reviews · Excel / CSV</h2><p>Upload your completed Review 100 worksheet. Preview first; only reviewer_1 columns are imported. Previously saved votes are skipped.</p></div><span class="panel-tag">TWO-STEP IMPORT</span></div>
+              <div class="s81-import-body">
+                <label class="form-field">Select completed review workbook (.xlsx or .csv)<input id="s82File" type="file" accept=".xlsx,.csv" /></label>
+                <div class="s81-import-actions"><button id="s82Preview" type="button" class="btn btn-primary">1 · Preview imported votes</button><button id="s82Commit" type="button" class="btn btn-outline" disabled>2 · Confirm & import new votes</button></div>
+                <div id="s82Feedback" class="benchmark-feedback" role="status" aria-live="polite">Choose the file you personally reviewed. AI suggestions in columns P–U never count as human votes.</div>
+                <div id="s82Results"></div>
+                <p class="form-hint">Research note: spreadsheet-imported votes cannot be assumed blind, especially if AI suggestions were visible during review. Each batch is recorded in the audit log. Review all preview errors before importing.</p>
+              </div>
+            </section>
+            <div class="h8-workbench">
+              <section class="panel"><div class="panel-heading"><div><h2>Review queue</h2><p>Pick HOLD-021 next if you already completed 20 cases.</p></div><span id="s81ListCount" class="panel-tag">0 CASES</span></div>
+                <div id="s81Queue" class="h8-case-list"><div class="empty">Connect to AgentOps to load the review queue.</div></div>
+              </section>
+              <section class="panel h8-review-panel"><div class="panel-heading"><div><h2 id="s81CaseTitle">Choose a case</h2><p id="s81CaseHint">Read source evidence before labeling.</p></div><span id="s81Blind" class="panel-tag">BLIND</span></div>
+                <div id="s81Evidence" class="h8-case-body"><div class="empty">Select a case from the left.</div></div>
+                <form id="s81Form" class="h8-decision-form form-fields" hidden>
+                  <label class="form-field">Your evidence verdict<select id="s81Label" required><option value="">Choose a label</option><option value="supported">supported</option><option value="unsupported">unsupported</option><option value="contradicted">contradicted</option><option value="abstention">abstention</option></select></label>
+                  <label class="form-field">Evidence-based reason<textarea id="s81Reason" required minlength="12" maxlength="2000" rows="3" placeholder="Explain the source evidence in your own words, before looking at AI suggestions."></textarea></label>
+                  <label class="form-field">Confidence (1–5)<select id="s81Confidence"><option value="5">5 · Very confident</option><option value="4">4 · Confident</option><option value="3">3 · Moderate</option><option value="2">2 · Low</option><option value="1">1 · Uncertain</option></select></label>
+                  <div class="modal-footer"><button type="submit" id="s81Save" class="btn btn-primary">Save human vote</button><button type="button" id="s81Next" class="btn btn-outline">Next unreviewed case</button></div>
+                  <div id="s81Feedback" class="benchmark-feedback" role="status" aria-live="polite">No vote submitted in this session.</div>
+                </form>
+              </section>
+            </div>
+            <section class="panel full" style="margin-top:18px">
+              <div class="panel-heading"><div><h2>Single-human vs Qwen · partial report</h2><p>First recorded human verdict vs saved reliability predictions. Spreadsheet imports are NOT necessarily blind; only reviewed cases are scored.</p></div><span class="panel-tag">RESEARCH REPORT</span></div>
+              <div id="s81ReportStatus" class="benchmark-summary"><span>Choose a completed study after your reviews load.</span></div>
+              <div class="h8-exports">
+                <label class="form-field">Completed reliability study<select id="s81Study"><option value="">Choose a study…</option></select></label>
+                <button type="button" id="s81Compare" class="btn btn-primary">Compare to Qwen</button>
+                <button type="button" id="s81Csv" class="btn btn-outline">↓ Export CSV</button>
+                <button type="button" id="s81Json" class="btn btn-outline">↓ Export JSON</button>
+              </div>
+              <div id="s81Report" class="h8-comparison"><div class="empty">Only the cases you personally labeled will enter the comparison. Cohen’s κ is N/A.</div></div>
+            </section>
+          </section>
+
+          <section id="research_v9" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">RESEARCH · PROVENANCE · GITHUB</div><h1>Research reports<span class="title-dot">.</span></h1><p>Versioned, reproducible research snapshot — not a live view of your private human votes.</p></div><span class="header-pill">Frozen judge · audited research</span></div>
+            <div class="stat-grid">
+              <article class="stat"><div class="stat-top">MEAN ACCURACY <span>◉</span></div><strong id="v9Acc">—</strong><small>100 synthetic cases · 2 repeats</small></article>
+              <article class="stat"><div class="stat-top">MEAN MACRO F1 <span>▥</span></div><strong id="v9F1">—</strong><small>Four-class synthetic holdout</small></article>
+              <article class="stat"><div class="stat-top">REPEAT AGREEMENT <span>◎</span></div><strong id="v9Agreement">—</strong><small>Same verdict across both runs</small></article>
+              <article class="stat attention"><div class="stat-top">WRONG IN BOTH <span>◇</span></div><strong id="v9Wrong">—</strong><small>Persistent errors worth investigating</small></article>
+            </div>
+            <section class="panel full"><div class="panel-heading"><div><h2>Verified research snapshot</h2><p>Source-entity clustered confidence intervals · single-reviewer provenance · immutable source checksums</p></div><span class="panel-tag">NOT PRODUCTION METRICS</span></div>
+              <div id="v9Overview" class="benchmark-summary"><div class="empty">Connect with your API key to inspect the published research summary.</div></div>
+              <div class="h8-exports" style="margin-top:18px"><button id="v9DownloadMd" class="btn btn-primary" type="button">↓ Download public research Markdown</button><button id="v9DownloadJson" class="btn btn-outline" type="button">↓ Download aggregate JSON</button><button id="v9Refresh" class="btn btn-outline" type="button">↻ Refresh snapshot</button></div>
+              <div id="v9Message" class="benchmark-feedback" role="status" aria-live="polite">Source: packaged public report, not live PostgreSQL; to incorporate later vote corrections, export new review data and regenerate locally.</div>
+            </section>
+            <section class="panel full"><div class="panel-heading"><div><h2>Publishing checklist</h2><p>What must be true before you push source code to GitHub.</p></div><span class="panel-tag">LOCAL STEPS</span></div>
+              <div class="h8-case-body"><p><strong>Research:</strong> Synthetic author-curated gold; 25 source clusters. A single human reviewer recorded 100 votes, some imported and not verifiably blind. The published 99% assistant-suggestion agreement is not Qwen accuracy or inter-reviewer agreement.</p><p><strong>Secrets:</strong> Never upload <code>.env</code>, database volumes, raw reviewer exports or company documents. Run <code>python scripts/check_research.py</code>, verify <code>git status</code> and inspect staged files.</p><p><strong>Code:</strong> Frozen judge and holdout hashes are checked during report regeneration; use a new dataset and judge version for any subsequent tuning.</p><p><strong>Docs:</strong> Read <code>docs/WORKFLOW_PLAN.md</code> and <code>docs/OPERATIONS.md</code> before publishing.</p></div>
+            </section>
+          </section>
+          <section id="approvals" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">HUMAN IN THE LOOP</div><h1>Approval queue<span class="title-dot">.</span></h1><p>Review every high-impact recommendation before finalization.</p></div><div class="header-pill">Decision events are audited</div></div>
+            <div id="approvalList" class="approval-list"></div>
+          </section>
+          <section id="memory" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">LONG-TERM CONTEXT</div><h1>Persistent memory<span class="title-dot">.</span></h1><p>Approved workflow summaries carried forward to subsequent runs.</p></div><span id="memoryCount" class="header-pill">0 records</span></div>
+            <div class="panel full"><div id="memoryList" class="memory-list"></div></div>
+          </section>
+          <section id="audit" class="tab-page">
+            <div class="page-heading"><div><div class="eyebrow">SECURITY & COMPLIANCE</div><h1>Audit trail<span class="title-dot">.</span></h1><p>Timestamped events with tamper-evident hash chaining.</p></div><button id="verifyBtn" class="btn btn-outline">Verify chain integrity</button></div>
+            <div id="verifyResult" class="verify-result"></div>
+            <div class="panel full"><div id="auditList" class="audit-list"></div></div>
+          </section>
+        </div>
+      </main>
+    </div>
+  </div>
+  <div id="modalBackdrop" class="modal-backdrop" hidden>
+    <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-heading"><div><div class="eyebrow" id="modalEyebrow">NEW WORKFLOW</div><h2 id="modalTitle">Create a workflow</h2></div><button id="modalClose" class="icon-btn" aria-label="Close">×</button></div>
+      <div id="modalContent"></div>
+    </section>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="/assets/app.js?v=brand1" defer></script>
+</body>
+</html>

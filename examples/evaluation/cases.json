@@ -1,0 +1,35 @@
+[
+  {
+    "name": "supported_claims",
+    "input": "Hello,\n1. What is the battery life?\n2. Which Bluetooth version does it support?",
+    "knowledge": [
+      {"source_id": "fixture-source-1", "title": "Demo headphones", "filename": "demo.md", "score": 0.9,
+       "text": "- Battery life: Up to 20 hours under the demo test profile.\n- Bluetooth: Bluetooth 5.3."}
+    ],
+    "expected_unsupported": [],
+    "expected_citations": ["fixture-source-1"],
+    "expected_question_tracking": 1.0
+  },
+  {
+    "name": "no_supported_claims",
+    "input": "Hello,\n1. What is the exact retail price?\n2. Does it support Active Noise Cancellation?",
+    "knowledge": [
+      {"source_id": "fixture-source-1", "title": "Demo headphones", "filename": "demo.md", "score": 0.9,
+       "text": "- Battery life: Up to 20 hours under the demo test profile.\n- Bluetooth: Bluetooth 5.3."}
+    ],
+    "expected_unsupported": ["Exact retail price", "Active Noise Cancellation (ANC)"],
+    "expected_citations": [],
+    "expected_question_tracking": 1.0
+  },
+  {
+    "name": "mixed_claims",
+    "input": "Hello,\n1. What is the battery life?\n2. What is the exact retail price?",
+    "knowledge": [
+      {"source_id": "fixture-source-1", "title": "Demo headphones", "filename": "demo.md", "score": 0.9,
+       "text": "- Battery life: Up to 20 hours under the demo test profile.\n- Bluetooth: Bluetooth 5.3."}
+    ],
+    "expected_unsupported": ["Exact retail price"],
+    "expected_citations": ["fixture-source-1"],
+    "expected_question_tracking": 1.0
+  }
+]

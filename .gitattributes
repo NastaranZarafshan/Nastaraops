@@ -1,0 +1,3 @@
+app/research_report.py whitespace=-blank-at-eol
+reports/public/RESEARCH_REPORT.md whitespace=-blank-at-eol
+scripts/verify_holdout_generator.py whitespace=-blank-at-eof

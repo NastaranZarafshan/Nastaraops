@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" aria-label="NastaraOps">
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#927cff"/><stop offset="1" stop-color="#eaa6c3"/></linearGradient></defs>
+  <rect width="64" height="64" rx="17" fill="#152139"/>
+  <g fill="#e3b6e7" fill-opacity=".8" stroke="#f4cae7" stroke-width="1.1">
+    <path d="M32 32C24 24 23 14 32 9C41 14 40 24 32 32Z"/>
+    <path d="M32 32C24 24 23 14 32 9C41 14 40 24 32 32Z" transform="rotate(72 32 32)"/>
+    <path d="M32 32C24 24 23 14 32 9C41 14 40 24 32 32Z" transform="rotate(144 32 32)"/>
+    <path d="M32 32C24 24 23 14 32 9C41 14 40 24 32 32Z" transform="rotate(216 32 32)"/>
+    <path d="M32 32C24 24 23 14 32 9C41 14 40 24 32 32Z" transform="rotate(288 32 32)"/>
+  </g>
+  <path d="m32 25 7 7-7 7-7-7Z" fill="#293454" stroke="#f9e4ec" stroke-width="1.6"/>
+</svg>

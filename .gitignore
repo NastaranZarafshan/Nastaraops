@@ -1,0 +1,36 @@
+# Credentials / environment
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.secrets
+# Local state / personal exports
+.local/
+private-data/
+local-volumes/
+reviewer-exports/
+reports/private/
+reports/generated/
+*.xlsx
+*.xls
+*.db
+*.backup.*
+*.bak
+*.log
+worker-build.log
+agentops-single-review*.json
+agentops-holdout-*.json
+# Development
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.py[cod]
+.vscode/
+.idea/
+.DS_Store
+coverage.xml
+htmlcov/
+dist/
+*.backup
