@@ -78,9 +78,9 @@ flowchart TB
 
 **Local deployment:** The Python application (API, MCP, and workers) runs inside a Windows `.venv`. Docker Desktop runs **PostgreSQL, Redis and Qdrant only**. Ollama is installed separately on the host when real model inference is desired.
 
-## Quick Start (Windows)
+## Quick Start
 
-**Requirements:** Windows 10/11; **Python 3.11 (64-bit)**; Docker Desktop with Linux containers and Compose; PowerShell; network access for initial package/image downloads. A GPU is optional for mock mode.
+**Requirements:** **Python 3.11 (64-bit)**; Docker Desktop with Linux containers and Compose; PowerShell; network access for initial package/image downloads. A GPU is optional for mock mode.
 
 ### 1. Create the Python environment
 
@@ -93,7 +93,7 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\scripts\setup.ps1
 
 Setup creates `.venv`, installs `requirements.txt` and generates `.env` with private, random credentials **only if the file does not already exist**. Never commit `.env`.
 
-If the Python launcher cannot find a manual Python installation, consult [Operations](docs/OPERATIONS.md). Python 3.11 is required; Python 3.13 need not be uninstalled.
+If the Python launcher cannot find a manual Python installation, consult [Operations](docs/OPERATIONS.md).
 
 ### 2. Start the platform
 
